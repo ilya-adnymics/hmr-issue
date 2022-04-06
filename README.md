@@ -1,29 +1,22 @@
-# Nuxt 3 Minimal Starter
+# HMR issue
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
+The HMR doesn't update the data on page.
 
-## Setup
+Steps to reproduce:
 
-Make sure to install the dependencies
-
-```bash
-yarn install
-```
-
-## Development
-
-Start the development server on http://localhost:3000
+1. Install dependencies and run project
 
 ```bash
-yarn dev
+npm install
+npm run dev
 ```
 
-## Production
+Open app on `http://localhost:3000`
 
-Build the application for production:
+2. Open `app.vue` and try changing `counter` value inside script tag and save.
 
-```bash
-yarn build
-```
+Result: The counter value is not updated on page. Try refreshing - new value appears.
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+3. Change anything in template and save.
+
+Result: The page is updated automatically without needing refresh.
